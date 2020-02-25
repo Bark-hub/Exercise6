@@ -1,7 +1,8 @@
 package com.company;
 
-import javax.swing.text.html.parser.Parser;
-import javax.xml.bind.ParseConversionEvent;
+// Mubarik Abdi 2/24/20
+// I did not enjoy this because I was solving things randomly, Kinda randomly.
+// Like I understood what I was doing but the logic was not hitting me.
 import java.util.*;
 
 public class Main {
@@ -10,9 +11,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //foodie();
-        //integerInput();
+        // my three methods
+        foodie();
+        integerInput();
+        doubleInput();
 
+
+
+    }
+
+    public static void doubleInput(){
         System.out.println("Enter a double: ");
         String number = input.nextLine();
 
@@ -22,17 +30,15 @@ public class Main {
         while (!pass){
 
             try{
-                userDouble = Integer.parseInt(number);
-                pass = false;
+                userDouble = Double.parseDouble(number);
+                pass = true;
             }catch (NumberFormatException e){
-                System.out.println(number + " Incorrect input");
+                System.out.println(number + " Incorrect Input, Try Again Harder");
                 number = input.nextLine();
             }
         }
-
-
+        System.out.println("------------");
     }
-
     public static void integerInput(){
         System.out.println("Enter an integer: ");
         String number = input.nextLine();
@@ -48,11 +54,12 @@ public class Main {
 
             } catch (NumberFormatException e) {
 
-                System.out.println(number +" Incorrect Input");
+                System.out.println(number +" Incorrect Input, Try Again Harder");
                 number = input.nextLine();
             }
 
         }
+        System.out.println("------------");
     }
 
     public static void foodie(){
@@ -73,6 +80,7 @@ public class Main {
                 pass = true;
             }
         }
+        System.out.println("----------------------------");
     }
 
 }
